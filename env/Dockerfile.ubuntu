@@ -5,7 +5,7 @@ MAINTAINER Xavier Morales <xavier.morales@amaris.com>
 #Hack to leave the container up by default
 CMD tail -f /etc/debian_version
 
-RUN apt-get update && apt-get install wget && \
+RUN apt-get update && apt-get install -y wget && \
     wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb && \
     dpkg -i puppetlabs-release-trusty.deb && \
     apt-get update && \
