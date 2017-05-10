@@ -58,6 +58,7 @@ service { 'httpd': ensure => running }
 file { '/etc/httpd/conf.d/tomcat.conf':
   ensure => present,
   source => "/opt/puppet/httpd_tomcat.conf",
+  require => Package['httpd'],
   notify => Service['httpd'],
 }
 
