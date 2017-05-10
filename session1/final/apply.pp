@@ -40,7 +40,7 @@ file { '/opt/tomcat':
 } ->
 file { "/tmp/apache-tomcat-7.0.77.tar.gz": ensure => absent }
 file { "/etc/init.d/tomcat":
-  source => "/root/puppet-demo/session1/tomcat.initd",
+  source => "/opt/puppet/tomcat.initd",
   mode   => 0755,
  }
 service {'tomcat':
@@ -57,7 +57,7 @@ package { 'httpd': ensure => installed }
 service { 'httpd': ensure => running }
 file { '/etc/httpd/conf.d/tomcat.conf':
   ensure => present,
-  source => "/root/puppet-demo/session1/httpd_tomcat.conf",
+  source => "/opt/puppet/httpd_tomcat.conf",
   notify => Service['httpd'],
 }
 
