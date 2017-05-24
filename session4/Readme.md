@@ -10,4 +10,12 @@ Use the following considerations:
 * The service is not yet enabled, so we won't be able to browse in the web page.
 
 ## Exercise 2
+Improve the nginx module so that:
+* Enables the service and restarts every time configuration changes
+* Is able to configure a virtualhost with the parameters 'servername', 'port'
+* Ensures that it has a diferent document root per virtualhost
+* Ensures that each document root has an index.html with the servername, the hostname and ip address
+* Declare a smoke test that configures 2 virtualhosts
+
+## Exercise 3
 
