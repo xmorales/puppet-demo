@@ -6,7 +6,7 @@ Build an nginx module that:
 * Ensures that the index.html is personalized with your hostname and ip address
 * Declare your nginx class in a smoke test and run it
 Use the following considerations:
-* Document root has to be /var/www
+* Document root has to be /var/www/html
 * The service is not yet enabled, so we won't be able to browse in the web page.
 
 ## Exercise 2
@@ -18,4 +18,3 @@ Improve the nginx module so that:
 * Declare a smoke test that configures 2 virtualhosts
 
 ## Exercise 3
-
